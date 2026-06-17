@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cua4308g2eqf2"]
+
+[ext_resource type="Script" uid="uid://fmcgur1rjxqw" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://diyo0fggueea0" path="res://assets/BarPlayer.png" id="2_qhqgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
+size = Vector2(3, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(8, 62)
+
+[node name="BarPlayer" type="CharacterBody2D" unique_id=2099090187 groups=["Players"]]
+motion_mode = 1
+script = ExtResource("1_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=803333415]
+texture = ExtResource("2_qhqgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1818888187]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_dqkch")
+
+[node name="Size" type="CollisionShape2D" parent="." unique_id=764171770]
+shape = SubResource("RectangleShape2D_g2els")
+
+[node name="Settings" type="Node" parent="." unique_id=1984908827]
+
+[node name="HitSound" type="AudioStreamPlayer" parent="Settings" unique_id=307502027]

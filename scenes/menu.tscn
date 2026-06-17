@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://danmxcsmy1yqx"]
+
+[ext_resource type="Script" uid="uid://dp6sh0dii6ie2" path="res://scripts/menu.gd" id="1_yqeox"]
+
+[node name="Control" type="Control" unique_id=387714067]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqeox")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2098127068]
+layout_mode = 0
+offset_right = 272.0
+offset_bottom = 160.0
+color = Color(0.17921105, 0.0886348, 0.48788053, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=374203964]
+layout_mode = 0
+offset_right = 272.0
+offset_bottom = 160.0
+
+[node name="Main" type="VBoxContainer" parent="MarginContainer" unique_id=442931565]
+layout_mode = 2
+alignment = 1
+
+[node name="Title" type="VBoxContainer" parent="MarginContainer/Main" unique_id=1970099376]
+layout_mode = 2
+alignment = 1
+
+[node name="Main_Title" type="Label" parent="MarginContainer/Main/Title" unique_id=447985977]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "PONGING"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="MarginContainer/Main/Title" unique_id=593095576]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "pong like game"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Main" unique_id=1448905329]
+layout_mode = 2
+alignment = 1
+
+[node name="Start" type="Button" parent="MarginContainer/Main/HBoxContainer" unique_id=1162843959]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Start"
+
+[node name="Exit" type="Button" parent="MarginContainer/Main/HBoxContainer" unique_id=809260408]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Exit
+"
+
+[node name="Copyright" type="Label" parent="MarginContainer/Main" unique_id=815930920]
+layout_mode = 2
+text = "Jokerpowered"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/Main/HBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/Main/HBoxContainer/Exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://by6vxva0ac82h"]
+
+[ext_resource type="Script" uid="uid://cof7m7o8qehfx" path="res://scripts/scenary.gd" id="1_v2cjw"]
+[ext_resource type="PackedScene" uid="uid://8nts4w1a33fc" path="res://scenes/gui.tscn" id="2_twuhq"]
+[ext_resource type="PackedScene" uid="uid://bofjygmcbm3iu" path="res://scenes/enemy.tscn" id="3_pkswh"]
+[ext_resource type="PackedScene" uid="uid://cua4308g2eqf2" path="res://scenes/player.tscn" id="4_toi6n"]
+[ext_resource type="PackedScene" uid="uid://bd0o5ma2ecxam" path="res://scenes/ball.tscn" id="5_vndpa"]
+
+[node name="Scenary" type="Node2D" unique_id=1151692740]
+script = ExtResource("1_v2cjw")
+
+[node name="Control" parent="." unique_id=756656713 instance=ExtResource("2_twuhq")]
+
+[node name="Settings" type="Node" parent="." unique_id=301588862]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="Settings" unique_id=165482195]
+
+[node name="Background" type="Node" parent="." unique_id=1697396253]
+
+[node name="MainBackground" type="Sprite2D" parent="Background" unique_id=1520564952]
+
+[node name="Enemy" parent="." unique_id=1048633141 instance=ExtResource("3_pkswh")]
+position = Vector2(267, 80)
+
+[node name="Player" parent="." unique_id=872470304 instance=ExtResource("4_toi6n")]
+position = Vector2(5, 80)
+
+[node name="Ball" parent="." unique_id=628290043 instance=ExtResource("5_vndpa")]
+position = Vector2(136, 80)

@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bofjygmcbm3iu"]
+
+[node name="Enemy" type="Node2D" unique_id=1048633141 groups=["Players"]]
