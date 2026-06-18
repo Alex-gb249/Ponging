@@ -20,10 +20,10 @@ script = ExtResource("1_v2cjw")
 [node name="MainBackground" type="Sprite2D" parent="Background" unique_id=1520564952]
 
 [node name="Enemy" parent="." unique_id=1048633141 instance=ExtResource("3_pkswh")]
-position = Vector2(267, 80)
+position = Vector2(265.5, 80)
 
 [node name="Player" parent="." unique_id=872470304 instance=ExtResource("4_toi6n")]
-position = Vector2(5, 80)
+position = Vector2(6.5, 80)
 
 [node name="Ball" parent="." unique_id=628290043 instance=ExtResource("5_vndpa")]
 position = Vector2(136, 80)

@@ -10,17 +10,19 @@ size = Vector2(3, 60)
 size = Vector2(8, 62)
 
 [node name="BarPlayer" type="CharacterBody2D" unique_id=2099090187 groups=["Players"]]
+position = Vector2(-1, 0)
 motion_mode = 1
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=803333415]
+position = Vector2(-1.5, 0)
 texture = ExtResource("2_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1818888187]
-position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_dqkch")
 
 [node name="Size" type="CollisionShape2D" parent="." unique_id=764171770]
+position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Settings" type="Node" parent="." unique_id=1984908827]
