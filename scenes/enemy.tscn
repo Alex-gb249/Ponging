@@ -1,3 +1,29 @@
 [gd_scene format=3 uid="uid://bofjygmcbm3iu"]
 
-[node name="Enemy" type="Node2D" unique_id=1048633141 groups=["Players"]]
+[ext_resource type="Script" uid="uid://bhvuohbmhvytt" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://2gghfunxkivv" path="res://assets/BarEnemy.png" id="2_md0e3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
+size = Vector2(3, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(8, 62)
+
+[node name="BarEnemy" type="CharacterBody2D" unique_id=2099090187 groups=["Players"]]
+motion_mode = 1
+script = ExtResource("1_md0e3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=803333415]
+position = Vector2(1.5, 0)
+texture = ExtResource("2_md0e3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1818888187]
+shape = SubResource("RectangleShape2D_dqkch")
+
+[node name="Size" type="CollisionShape2D" parent="." unique_id=764171770]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_g2els")
+
+[node name="Settings" type="Node" parent="." unique_id=1984908827]
+
+[node name="HitSound" type="AudioStreamPlayer" parent="Settings" unique_id=307502027]
