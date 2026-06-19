@@ -14,7 +14,7 @@ func _ready() -> void:
 	limitBottom = screenHeight - half_bar_height
 
 func _physics_process(_delta: float) -> void:
-	var direction := Input.get_axis("ui_up", "ui_down")
+	var direction := Input.get_axis("ui_w_letter", "ui_s_letter")
 	velocity.y = direction * SPEED
 
 	move_and_slide()
