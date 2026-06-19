@@ -30,6 +30,7 @@ window/stretch/mode="viewport"
 [global_group]
 
 Players="Player, and enemy"
+Walls="In game walls"
 
 [physics]
 
